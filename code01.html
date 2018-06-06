@@ -54,9 +54,9 @@
       </li>
 	  <li><a >我的游戏</a>
         <ul class="sub-nav">
-          <li><a href="">英雄联盟（待开发）</a></li>
+          <li><a href="lol01.html">英雄联盟</a></li>
           <li><a href="ow01.html">守望先锋</a></li>
-          <li><a href="">绝地求生（待开发）</a></li>
+          <li><a href="pubg01.html">绝地求生</a></li>
         </ul>
       </li>
       <li><a href="https://blog.csdn.net/qq_29591261" target="_blank">CSDN博客</a> </li>
@@ -91,7 +91,7 @@
 		（2）排名高的网页应具有更大的表决权，即当一个网页被排名高的网页所链接时，其重要性也应该提高。 <br>
 		所以基于以上两点，PageRank算法所建立的模型非常简单：一个网页的排名等于所有链接到该网页的网页的加权排名之和。</p><br>
 
-		<p><img src="https://img-blog.csdn.net/20170917210755070" alt="这里写图片描述" title=""></p><br>
+		<p><img src="images/code/textrank1.jpg" alt="" title=""></p><br>
 
 		<p>整个www可以看作一张有向图图，节点是网页。如果网页A存在到网页B的链接，那么有一条从网页A指向网页B的有向边。</p><br>
 
@@ -111,7 +111,7 @@
 
 		<p>TextRank 一般模型可以表示为一个有向有权图 G =(V, E), 由点集合 V和边集合 E 组成, E 是V ×V的子集。图中任两点 Vi , Vj 之间边的权重为 wji , 对于一个给定的点 Vi, In(Vi) 为 指 向 该 点 的 点 集 合 , Out(Vi) 为点 Vi 指向的点集合。点 Vi 的得分定义如下:</p><br>
 
-		<p><img src="https://img-blog.csdn.net/20170917210956449" alt="这里写图片描述" title=""></p><br>
+		<p><img src="images/code/textrank2.jpg" alt="这里写图片描述" title=""></p><br>
 
 		<p>其中, d 为阻尼系数, 取值范围为 0 到 1, 代表从图中某一特定点指向其他任意点的概率, 一般取值为 0.85。</p><br>
 
@@ -119,7 +119,7 @@
 
 		<p>由于引入了句子的相似度，所以正规的TextRank公式是用来从文章中自动抽取关键句，但是我们现在是想计算关键字，如果把一个单词视为一个句子的话，那么所有句子（单词）构成的边的权重都是0（没有交集，没有相似性），所以分子分母的权值w约掉了，算法退化为PageRank。所以说，关键字提取算法也就是PageRank。</p><br>
 
-		<p><img src="https://img-blog.csdn.net/20170917210755070" alt="这里写图片描述" title=""></p><br>
+		<p><img src="images/code/textrank3.jpg" alt="这里写图片描述" title=""></p><br>
 
 		<p>对于提取关键词来说，假如设窗口大小为5，In(Vi)是与词i的距离不大于5的词的集合。Out(Vj)是与词j距离不大于5词的集合，|Out(Vj)|是集合中元素的个数。 </p><br>
 
