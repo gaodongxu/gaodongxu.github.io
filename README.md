@@ -1,3 +1,3 @@
 # gaodongxu.github.io
-my blog website
+My blog website. 
 Please visit https://gaodongxu.github.io/
